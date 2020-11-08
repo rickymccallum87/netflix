@@ -1,0 +1,365 @@
+:root {
+  --primary-color: #e50914;
+  --secondary-color: #303030;
+  --tertiary-color: #757575;
+
+  --text-color: white;
+  --background-color: black;
+  --border-color: #222;
+}
+
+@font-face {
+ font-family: 'Netflix Sans';
+ font-weight: 400;
+ src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+ font-family: 'Netflix Sans';
+ font-weight: 700;
+ src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: netflix sans;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+}
+
+/* Header */
+
+header {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+}
+
+.logo {
+  height: 32px;
+}
+
+.sign-in {
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    height: initial;
+  }
+
+  .sign-in {
+    font-size: initial;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Showcase */
+
+.showcase {
+  align-items: center;
+  background: center url(img/background.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 30rem 5rem black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.showcase h1 {
+  font-size: 1.75rem;
+  max-width: 640px;
+}
+
+.showcase h2 {
+  font-size: 1.125rem;
+}
+
+.showcase h1,
+.showcase h2,
+.showcase p {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    min-height: 768px;
+  }
+
+  .showcase h1 {
+    font-size: 4rem;
+  }
+
+  .showcase h2 {
+    font-size: 1.625rem;
+  }
+}
+
+/* Sections */
+
+section {
+  border-bottom: 0.6rem solid var(--border-color);
+}
+
+.container {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+}
+
+.columns {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.columns h1 {
+  margin-bottom: 1rem;
+}
+
+.columns p {
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 5rem 2rem;
+  }
+
+  .columns {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .offline .columns {
+    flex-direction: row-reverse;
+  }
+
+  .columns > div {
+    width: 50%;
+  }
+
+  .columns h1 {
+    font-size: 3rem;
+  }
+  
+  .columns p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* Membership */
+
+.membership p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.membership form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.membership .email {
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 0.5rem;
+  width: 100%;
+}
+
+.membership .btn {
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .membership {
+    align-self: stretch;
+  }
+
+  .membership form {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .membership .email {
+    font-size: 1rem;
+    margin-bottom: 0;
+    max-width: 30rem;
+    padding: 1.25rem 0.5rem;
+  }
+
+  .membership .btn {
+    border-radius: 0 0.1rem 0.1rem 0;
+    font-size: 1.75rem;
+  }
+}
+
+/* FAQ */
+
+.faq-list {
+  padding: 3rem 1rem;
+}
+
+.faq-list h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.faq-items {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  margin: auto;
+  margin-bottom: 0.5rem;
+  max-width: 815px;
+  width: 75%;
+}
+
+.faq-question, .faq-answer {
+  background-color: var(--secondary-color);
+}
+
+.faq-question {
+  color: var(--text-color);
+  cursor: pointer;
+  margin-bottom: 1px;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.faq-question:after {
+  content: "\2573";
+  float: right;
+  transform: rotate(45deg);
+}
+
+.active:after {
+  content: "\2573";
+  transform: rotate(0deg);
+}
+
+.faq-answer {
+  display: none;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.faq-answer p {
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .faq-items {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Footer */
+
+footer {
+  color: var(--tertiary-color);
+  margin: auto;
+  padding: 3rem 1rem;
+  max-width: 900px;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+footer a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer li {
+  margin-bottom: 1rem;
+}
+
+.footer-column {
+  columns: 2;
+  margin-bottom: 2rem;
+}
+
+.footer-column a {
+  color: var(--tertiary-color);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+#language {
+  color: #999;
+}
+
+.language select {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.language button:active {
+  border: 1px solid var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .footer-column {
+    columns: 4;
+  }
+}
