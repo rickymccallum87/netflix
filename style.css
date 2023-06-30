@@ -9,15 +9,15 @@
 }
 
 @font-face {
- font-family: 'Netflix Sans';
- font-weight: 400;
- src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+  font-family: 'Netflix Sans';
+  font-weight: 400;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
 }
 
 @font-face {
- font-family: 'Netflix Sans';
- font-weight: 700;
- src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+  font-family: 'Netflix Sans';
+  font-weight: 700;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
 }
 
 body {
@@ -182,7 +182,7 @@ section {
   .columns h1 {
     font-size: 3rem;
   }
-  
+
   .columns p {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -263,7 +263,8 @@ section {
   width: 75%;
 }
 
-.faq-question, .faq-answer {
+.faq-question,
+.faq-answer {
   background-color: var(--secondary-color);
 }
 

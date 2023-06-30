@@ -2,7 +2,7 @@ var acc = document.getElementsByClassName("faq-question");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var answer = this.nextElementSibling;
     if (answer.style.display === "block") {
